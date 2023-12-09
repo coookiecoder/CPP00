@@ -18,12 +18,25 @@ Contact::~Contact(void)
 
 Contact::Contact(std::string fName, std::string lName, std::string nName, std::string pNumber, std::string dSecret)
 {
-  this->firstName = fName;
-  this->lastName = lName;
-  this->nickname = nName;
-  this->phoneNumber = pNumber;
-  this->darkestSecret = dSecret;
-  std::cout << "Contact has been set UwU" << std::endl;
+  if (fName.empty() || lName.empty() || nName.empty() || pNumber.empty() || dSecret.empty())
+  {
+    std::cout << "no empty field pls UwU" << std::endl;
+    this->firstName = "empty";
+    this->lastName = "empty";
+    this->nickname = "empty";
+    this->phoneNumber = "empty";
+    this->darkestSecret = "empty";
+    std::cout << "Contact has been set but empty UwU" << std::endl;
+  }
+  else
+  {
+    this->firstName = fName;
+    this->lastName = lName;
+    this->nickname = nName;
+    this->phoneNumber = pNumber;
+    this->darkestSecret = dSecret;
+    std::cout << "Contact has been set UwU" << std::endl;
+  }
 }
 
 

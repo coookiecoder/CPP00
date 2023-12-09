@@ -43,20 +43,25 @@ std::string PhoneBook::truncated(const std::string str) {
 
 void PhoneBook::ft_search(void)
 {
+  std::cout << "#----------#----------#----------#----------#" << std::endl;
+
   std::cout << "|" << std::right << std::setw(10) << "index" 
             << "|" << std::setw(10) << "first name" 
             << "|" << std::setw(10) << "last name"
             << "|" << std::setw(10) << "nickname" << "|" << std::endl;
+
+  std::cout << "#----------#----------#----------#----------#" << std::endl;
 
   for (int i = 0; i < 8; i++) {
     std::cout << "|" << std::right << std::setw(10) << i
               << "|" << std::setw(10) << truncated(ListContact[i].getFirstName())
               << "|" << std::setw(10) << truncated(ListContact[i].getLastName())
               << "|" << std::setw(10) << truncated(ListContact[i].getNickname()) << "|" << std::endl;
+    std::cout << "#----------#----------#----------#----------#" << std::endl;
   }
-  int index;
+  int index = 0;
   
-  std::cout << "who do you want info on ? (0 -> 7) UwU : " << std::endl;
+  std::cout << "who do you want info on ? (0 -> 7, default : 0) UwU : ";
   std::cin >> index;
   if (index > 7 || index < 0)
     std::cout << "nope UwU" << std::endl;
@@ -67,4 +72,5 @@ void PhoneBook::ft_search(void)
     std::cout << "Nick Name : " << this->ListContact[index].getNickname() << std::endl;
     std::cout << "Phone Number : " << this->ListContact[index].getPhoneNumber() << std::endl;
   }
+  std::cin.clear();
 }
