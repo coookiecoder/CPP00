@@ -38,7 +38,9 @@ void PhoneBook::ft_add(void) {
 }
 
 std::string PhoneBook::truncated(const std::string str) {
-  return str.size() > 10 ? str.substr(0, 9) + "." : str;
+  if (str.size() > 10)
+    return str.substr(0, 9) + ".";
+  return (str);
 }
 
 void PhoneBook::ft_search(void)

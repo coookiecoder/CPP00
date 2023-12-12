@@ -1,8 +1,8 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include <string>
 # include "Contact.hpp"
+# include <string>
 
 class PhoneBook {
   private:
