@@ -14,7 +14,6 @@ class PhoneBook {
     ~PhoneBook(void);
     void  ft_add(void);
     void  ft_search(void);
-    void  ft_exit(void);
 };
 
 #endif
