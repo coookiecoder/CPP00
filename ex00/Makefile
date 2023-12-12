@@ -1,7 +1,6 @@
 CC=c++
 CFLAGS= -std=c++98 -Wall -Werror -Wextra
 
-SRC=megaphone.c
 OBJ=megaphone.o
 NAME=megaphone
 
